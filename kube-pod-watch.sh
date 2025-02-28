@@ -11,7 +11,7 @@ LOG_FILE="logs/pod_monitor.log"
 send_alert() {
     local MESSAGE="$1"
     echo "[ALERT] $MESSAGE" | tee -a "$LOG_FILE"
-    curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$MESSAGE\"}" "$SLACK_WEBHOOK_URL"
+    #url -X POST -H 'Content-type: application/json' --data "{\"text\":\"$MESSAGE\"}" "$SLACK_WEBHOOK_URL"
 }
 
 monitor_pods() {
@@ -56,6 +56,6 @@ monitor_resources() {
 monitor_pods &  
 while true; do
     check_deployments
-    monitor_resources
+    
     sleep 60
 done

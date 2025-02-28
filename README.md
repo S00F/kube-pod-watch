@@ -8,7 +8,6 @@ A lightweight shell script for monitoring Kubernetes **pods, deployments, and re
 ✅ Real-time Pod Status Monitoring  
 ✅ Deployment Health Checks  
 ✅ CPU & Memory Usage Tracking  
-✅ Slack/Webhook Alerts  
 ✅ Automatic Logging  
 ✅ CPU & Memory Usage Tracking  
 
@@ -38,7 +37,6 @@ brew install jq       # MacOS
 Edit `config.env`:
 ```sh
 NAMESPACE="default"
-SLACK_WEBHOOK_URL="https://hooks.slack.com/services/your/slack/webhook"
 ```
 
 ### 4️⃣ Run the Script
@@ -71,10 +69,7 @@ chmod +x kube-pod-watch.sh
 
 ---
 
-## 📜 License
-MIT License. Free to use and modify.
 
----
 
 ## 🤝 Contributing
 1. Fork the repo  
@@ -83,7 +78,3 @@ MIT License. Free to use and modify.
 4. Open a Pull Request  
 
 ---
-
-## ✨ Credits
-Developed by [S00F](https://github.com/S00F).
-
